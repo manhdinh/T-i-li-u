@@ -8,10 +8,14 @@ Tim hieu ve KeyStone
 <ul>
 <li>Project: Một tenant, group, organization.Khi tạo yêu cầu tới OpenStack service, bạn phải định rõ một project.Ví dụ, nếu truy vấn Compute service cho một danh sách những instance đang chạy, bạn nhận được một list gồm tất cả những instance đang chạy trên project mà bạn truy vấn.</li>
 </ul>
--Domain: Định rõ ranh giới quản lý cho Identity.Mộ domain có thể đại diện cho cá nhân, hội hoặc operator-owner space.Nó gắn những hoạt động quản lý một cách trực tiếp tới hệ thống người dùng.
--Role: Tổ hợp những việc mà user có thể làm trong tenant nhận được.
-*Note : --Những service cá nhân như Compute và Image được mang ý nghĩa như là role.Trong Identity service, role chỉ đơn giản là một cái tên.
-            --Một user có thể có nhiều role trong nhiều tenant khác nhau.Một user cũng có thể có nhiều role trong cùng một tenant.
+<ul>
+<li>Domain: Định rõ ranh giới quản lý cho Identity.Mộ domain có thể đại diện cho cá nhân, hội hoặc operator-owner space.Nó gắn những hoạt động quản lý một cách trực tiếp tới hệ thống người dùng.</li>
+</ul>
+<ul>
+<li>Role: Tổ hợp những việc mà user có thể làm trong tenant nhận được.</li>
+</ul>
+*Note :     Những service cá nhân như Compute và Image được mang ý nghĩa như là role.Trong Identity service, role chỉ đơn giản là một cái tên.
+            Một user có thể có nhiều role trong nhiều tenant khác nhau.Một user cũng có thể có nhiều role trong cùng một tenant.*
 File /etc/[SERVICE_NAME]/policy.json kiểm soát những việc mà user có thể làm tới service nhận được.
 File policy.json mặc định trong Compute, Identity, Image chỉ nhận quyền Admin, tất cả những hoạt động khôn yêu cầu quyền admin thì được access bởi bất kỳ user nào có role trong tenant đấy.
 Ví dụ : Nếu muốn hạn chế những hoạt động của những user trong Compute, bạn cần tạo ra một role trong Identity sau đó sửa file policy.json trong Compute và gắn role đấy vào.
