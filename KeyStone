@@ -1,5 +1,5 @@
 Tim hieu ve KeyStone
-I.Ba Identity Concept
+#I.Ba Identity Concept
 1.User management
 -User: Người dùng là con người, những thông tin liên quan như tên, pass user, email...
 -Project: Một tenant, group, organization.Khi tạo yêu cầu tới OpenStack service, bạn phải định rõ một project.Ví dụ, nếu truy vấn Compute service cho một danh sách những instance đang chạy, bạn nhận được một list gồm tất cả những instance đang chạy trên project mà bạn truy vấn.
