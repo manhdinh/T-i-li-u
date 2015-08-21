@@ -5,7 +5,9 @@ Tim hieu ve KeyStone
 <ul>
 <li>User: Người dùng là con người, những thông tin liên quan như tên, pass user, email...</li>
 </ul>
--Project: Một tenant, group, organization.Khi tạo yêu cầu tới OpenStack service, bạn phải định rõ một project.Ví dụ, nếu truy vấn Compute service cho một danh sách những instance đang chạy, bạn nhận được một list gồm tất cả những instance đang chạy trên project mà bạn truy vấn.
+<ul>
+<li>Project: Một tenant, group, organization.Khi tạo yêu cầu tới OpenStack service, bạn phải định rõ một project.Ví dụ, nếu truy vấn Compute service cho một danh sách những instance đang chạy, bạn nhận được một list gồm tất cả những instance đang chạy trên project mà bạn truy vấn.</li>
+</ul>
 -Domain: Định rõ ranh giới quản lý cho Identity.Mộ domain có thể đại diện cho cá nhân, hội hoặc operator-owner space.Nó gắn những hoạt động quản lý một cách trực tiếp tới hệ thống người dùng.
 -Role: Tổ hợp những việc mà user có thể làm trong tenant nhận được.
 *Note : --Những service cá nhân như Compute và Image được mang ý nghĩa như là role.Trong Identity service, role chỉ đơn giản là một cái tên.
