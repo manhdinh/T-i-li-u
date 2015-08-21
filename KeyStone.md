@@ -32,9 +32,10 @@ Ví dụ : Nếu muốn hạn chế những hoạt động của những user tr
 ## 3.Group
 **Group là tập hợp của nhiều user.Admin có thể tạo một group và add users vào.Có thể gán một role cho từng user và gán một role cho group.Mỗi group ờ trong một domain.**
 # II.Hai cách xác thực cho keystone ( dựa vào  cách user đứa ra identification của họ ) 
-##1.UUID ( Universally Unique IDentifier
-##2.PKI ( Public Key IDentification ) 
+<li>1.UUID ( Universally Unique IDentifier
+<li>2.PKI ( Public Key IDentification ) </li>
 # III.Hợp nhất Idenity với LDAP
-##1.Idenity back-end chứa thông tin về user, group và danh sách group members.Admin có thể sử dụng users và groups trong LDAP.
-##2.Assignment back-end.Khi cấu hình OpenStack Identity service để sử dụng LDAP, bạn có thể chia riêng phần xác thực và sự ủy quyền bằng sử dụng assignment feature.Việc hợp nhất assignment back-end với LDAP giúp admin có thể sử dụng projects ( tenant ), role, domains, và role assignment trong LDAP
+1.Idenity back-end chứa thông tin về user, group và danh sách group members.Admin có thể sử dụng users và groups trong LDAP.
+##2.
+Assignment back-end.Khi cấu hình OpenStack Identity service để sử dụng LDAP, bạn có thể chia riêng phần xác thực và sự ủy quyền bằng sử dụng assignment feature.Việc hợp nhất assignment back-end với LDAP giúp admin có thể sử dụng projects ( tenant ), role, domains, và role assignment trong LDAP
 #IV.Token Blinding
