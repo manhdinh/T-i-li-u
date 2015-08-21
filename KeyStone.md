@@ -16,9 +16,11 @@ Tim hieu ve KeyStone
 </ul>
 *Note :     Những service cá nhân như Compute và Image được mang ý nghĩa như là role.Trong Identity service, role chỉ đơn giản là một cái tên.
             Một user có thể có nhiều role trong nhiều tenant khác nhau.Một user cũng có thể có nhiều role trong cùng một tenant.*
-File /etc/[SERVICE_NAME]/policy.json kiểm soát những việc mà user có thể làm tới service nhận được.
-File policy.json mặc định trong Compute, Identity, Image chỉ nhận quyền Admin, tất cả những hoạt động khôn yêu cầu quyền admin thì được access bởi bất kỳ user nào có role trong tenant đấy.
+<ul>
+<li>File /etc/[SERVICE_NAME]/policy.json kiểm soát những việc mà user có thể làm tới service nhận được.<li>
+<li>File policy.json mặc định trong Compute, Identity, Image chỉ nhận quyền Admin, tất cả những hoạt động khôn yêu cầu quyền admin thì được access bởi bất kỳ user nào có role trong tenant đấy.</li>
 Ví dụ : Nếu muốn hạn chế những hoạt động của những user trong Compute, bạn cần tạo ra một role trong Identity sau đó sửa file policy.json trong Compute và gắn role đấy vào.
+</ul>
 Trong Compute, trong file policy.json chỉ ra rằng không giới hạn quyền tạo volume và bất kỳ user nào cũng có thể tạo được volume, nếu bạn muốn hạn chế việc đó, bạn cần tạo 1 role trong Identity, ví dụ : compute-user sau đó gắn role đó vào trong file /etc/nova/policy.json.: "volume:create": "role:compute-user" .Lúc này chỉ compute-user mới có quyền tạo volume
 2.Service Management
 Identity Service cung cấp identity, token, catalog và policy, bao gồm : 
