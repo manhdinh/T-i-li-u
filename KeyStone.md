@@ -23,7 +23,7 @@ Ví dụ : Nếu muốn hạn chế những hoạt động của những user tr
 <li>Trong Compute, trong file policy.json chỉ ra rằng không giới hạn quyền tạo volume và bất kỳ user nào cũng có thể tạo được volume, nếu bạn muốn hạn chế việc đó, bạn cần tạo 1 role trong Identity, ví dụ : compute-user sau đó gắn role đó vào trong file /etc/nova/policy.json.: "volume:create": "role:compute-user" .Lúc này chỉ compute-user mới có quyền tạo volume</li>
 </ul>
 # 2.Service Management
-**Identity Service cung cấp identity, token, catalog và policy, bao gồm : **
+*Identity Service cung cấp identity, token, catalog và policy, bao gồm : *
 <ul>
 <li>keystone Web Server Gateway Interface ( WSGI ) service.Có thể chạy trên một WSGI-capable như Apache http để cung cấp Identity service.Service và APIs quản lý chạy như những instace riêng biệt trên WSGI service.
 <li>Identity Service functions.Mỗi cái có pluggable back-end mà có thể cho phép sử dụng theo nhiều cách khác nhau cho từng service cụ thể.Phần lớn đều support những back-end cơ bản như LDAP hoặc SQL.
